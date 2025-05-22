@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb+srv://karthiksriramoju11:1GJsE4lHeVegeDu7@cluster0.fztog3h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose
+  .connect("mongodb+srv://karthiksriramoju11:1GJsE4lHeVegeDu7@cluster0.fztog3h.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.error("MongoDB Error:", err));
 
 const userSchema = new mongoose.Schema({
     username: {
